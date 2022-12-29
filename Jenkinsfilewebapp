@@ -18,11 +18,7 @@ pipeline {
        }
     }
     
-    stage ('Deploy-To-Tomcat') {
-            steps {
-           sshagent(['tomcat-root']) {
-                sh 'scp /var/lib/jenkins/workspace/webapp-cicd-pipeline/target/WebApp.war root@192.168.152.134:var/lib/tomcat9/webapps/webapp.war'
-              }      
+    
            }       
     }
 }
