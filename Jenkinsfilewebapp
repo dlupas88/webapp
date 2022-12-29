@@ -21,7 +21,7 @@ pipeline {
     stage ('Deploy-To-Tomcat') {
             steps {
            sshagent(['tomcat']) {
-                sh 'scp /var/lib/jenkins/workspace/webapp-cicd-pipeline/target/webapp.war ubuntu@192.168.152.134:var/lib/tomcat9/webapps/webapp.war'
+                sh 'scp /var/lib/jenkins/workspace/webapp-cicd-pipeline/target/WebApp.war ubuntu@192.168.152.134:var/lib/tomcat9/webapps/webapp.war'
               }      
            }       
     }
